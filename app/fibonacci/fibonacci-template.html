@@ -1,0 +1,12 @@
+<table class="table">
+  <tr>
+    <th>nth</th>
+    <th>Fibonacci</th>
+    <th>Mod {{mod}} <button ng-hide="mod === 1" ng-click="setMod(1)">Reset</button></th>
+  </tr>
+  <tr class="clickable" ng-class="{true:'modrow', false:''}[mod>1&&fib%mod === 0]" ng-click="setMod(fib)" ng-repeat="fib in list track by $index">
+    <td>{{$index+1}}</td>
+    <td>{{fib}}</td>
+    <td>{{fib%mod}}</td>
+  </tr>
+</table>

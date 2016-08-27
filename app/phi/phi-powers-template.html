@@ -1,0 +1,15 @@
+<table class="table">
+  <tr>
+    <th>Power</th>
+    <th>Phi</th>
+    <th>Approx</th>
+    <th>Fibonacci</th>
+  </tr>
+  <tr ng-repeat="phi in phi_data track by $index">
+    <td>{{phi.power}}</td>
+    <td><div phi-fraction></div></td>
+    <td>{{phi.fib_approx}}</td>
+    <td>{{phi.sqrt_5_coef}}</td>
+  </tr>
+</table>
+
