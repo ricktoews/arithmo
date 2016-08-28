@@ -1,0 +1,12 @@
+<table class="table" ng-hide="isEmpty">
+  <tr>
+    <th>Fraction</th>
+    <th>Decimal</th>
+    <th>Meta</th>
+  </tr>
+  <tr ng-repeat="decimal in decimal_data track by $index">
+    <td>{{decimal.fraction}}</td>
+    <td><span class="decimal-pre">{{decimal.parts.pre}}</span><span class="decimal-part-a">{{decimal.parts.partA}}</span><span class="decimal-part-b">{{decimal.parts.partB}}</span></td>
+    <td>{{decimal.meta}}</td>
+  </tr>
+</table>
