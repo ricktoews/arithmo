@@ -1,0 +1,17 @@
+angular.module('MathApp')
+
+.directive('sectionLayout', function() {
+	return {
+		restrict: 'AE',
+		templateUrl: './app/section-layout-template.html',
+		link: (scope, el, attrs) => {
+			console.log('sectionLayout heading', attrs.sectionHeading);
+			scope.heading = attrs.sectionHeading;
+		},
+		scope: {
+			'heading': '@sectionHeading',
+			'info': '@sectionInfo',
+			'dataTable': '@sectionDataTable'
+		}
+	};
+});

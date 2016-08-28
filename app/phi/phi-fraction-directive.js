@@ -5,4 +5,12 @@ angular.module('MathApp')
 //		templateUrl: './app/phi/phi-mathjax-template.html'
 		templateUrl: './app/phi/phi-fraction-template.html'
 	}
-});
+})
+
+.directive('phiFractionVariant', function() {
+	return {
+		templateUrl: './app/phi/phi-fraction-variant-template.html'
+	}
+})
+
+;

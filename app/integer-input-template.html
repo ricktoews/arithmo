@@ -1,2 +1,5 @@
-<input class="form-control" type="number" ng-model="genericInt" ng-blur="setInt()">
+<div class="form-group">
+<label for="genericInt">{{label}}</label>
+<input id="genericInt" class="form-control" type="number" ng-model="genericInt" ng-change="setInt()">
+</div>
 

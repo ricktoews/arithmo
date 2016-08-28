@@ -1,15 +1,17 @@
 <table class="table" ng-hide="isEmpty">
   <tr>
     <th>Power</th>
-    <th>Phi</th>
+    <th>Phi^n</th>
+    <th>Variant</th>
     <th>Approx</th>
     <th>Fibonacci</th>
   </tr>
   <tr ng-repeat="phi in phi_data track by $index" repeat-done="update">
     <td>{{phi.power}}</td>
     <td><div phi-fraction></div></td>
-    <td>{{phi.fib_approx}}</td>
-    <td>{{phi.sqrt_5_coef}}</td>
+    <td><div phi-fraction-variant></div></td>
+    <td><span class="fib-approx">{{phi.fib_approx}}</span></td>
+    <td><span class="phi-fib">{{phi.sqrt_5_coef}}</span></td>
   </tr>
 </table>
 

@@ -2,6 +2,8 @@ angular.module('MathApp')
 
 .directive('integerInput', function() {
 	return {
-		templateUrl: './app/integer-input-template.html'
+		restrict: 'A',
+		templateUrl: './app/integer-input-template.html',
+		link: (scope, el, attrs) => { scope.label = attrs.label; }
 	};
 });

@@ -6,7 +6,7 @@ angular.module('MathApp')
 		.state('index', {
 			url: '/',
 			controller: 'MainCtrl',
-			templateUrl: './app/main.html'
+			templateUrl: './app/main-template.html'
 		})
 		.state('fibonacci', {
 			url: '/fibonacci/:firstnth',

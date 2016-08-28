@@ -1,22 +1,51 @@
-nav a {
+body {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+	position: static;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+	margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+	width: auto;
+}
+
+div.row {
+	overflow:hidden;
+}
+.info-column {
+	background-color:#eee;
+	padding:8px;
+	padding-bottom:999px;
+	margin-bottom:-999px;
+}
+
+.highlight {
+	color:green;
+}
+
+.modrow {
+	background-color:#ccc;
+}
+.clickable {
 	cursor:pointer;
 }
 
-    .modrow {
-        background-color:#ccc;
-    }
-    .clickable {
-        cursor:pointer;
-    }
+.decimal-pre {
+	color:#666;
+}
 
-    .decimal-pre {
-        color:#666;
-    }
+.decimal-part-a {
+	color:#f90;
+}
 
-    .decimal-part-a {
-        color:#f90;
-    }
-
-    .decimal-part-b {
-        color:#09f;
-    }
+.decimal-part-b {
+	color:#09f;
+}
