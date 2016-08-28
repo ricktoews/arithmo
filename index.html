@@ -3,6 +3,7 @@
 <head>
   <base href="/">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MathApp</title>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/lodash/4.14.1/lodash.min.js"></script>
@@ -20,6 +21,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.1/ui-bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.1/ui-bootstrap-tpls.min.js"></script>
 
+  <link rel="stylesheet" href="./app/assets/css/arithmo.css">
   <script>
 	var API = {
 		base: '//arithmo-rest.toewsweb.net'
@@ -29,6 +31,9 @@
   </script>
   <script src="./app/App.js"></script>
   <script src="./app/main-controller.js"></script>
+  <script src="./app/arithmo-nav-directive.js"></script>
+  <script src="./app/really-interesting-content-directive.js"></script>
+  <script src="./app/integer-input-directive.js"></script>
   <script src="./app/fibonacci/fibonacci-controller.js"></script>
   <script src="./app/fibonacci/fibonacci-service.js"></script>
   <script src="./app/fibonacci/fibonacci-directive.js"></script>
@@ -36,32 +41,18 @@
   <script src="./app/decimals/decimal-service.js"></script>
   <script src="./app/phi/phi-controller.js"></script>
   <script src="./app/phi/phi-fraction-directive.js"></script>
+  <script src="./app/phi/repeat-done-directive.js"></script>
   <script src="./app/phi/phi-service.js"></script>
 
-  <style type="text/css">
-    .modrow {
-        background-color:#ccc;
-    }
-    .clickable {
-        cursor:pointer;
-    }
-
-    .decimal-pre {
-        color:#666;
-    }
-
-    .decimal-part-a {
-        color:#f90;
-    }
-
-    .decimal-part-b {
-        color:#09f;
-    }
-  </style>
 </head>
 <body>
 <div class="container">
-<ui-view></ui-view>
+  <div class="row">
+    <div class="col-md-12">
+      <arithmo-nav></arithmo-nav>
+    </div>
+  </div>
 </div>
+<ui-view></ui-view>
 </body>
 </html>

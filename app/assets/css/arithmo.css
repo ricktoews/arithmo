@@ -1,0 +1,22 @@
+nav a {
+	cursor:pointer;
+}
+
+    .modrow {
+        background-color:#ccc;
+    }
+    .clickable {
+        cursor:pointer;
+    }
+
+    .decimal-pre {
+        color:#666;
+    }
+
+    .decimal-part-a {
+        color:#f90;
+    }
+
+    .decimal-part-b {
+        color:#09f;
+    }

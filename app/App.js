@@ -10,6 +10,10 @@ angular.module('MathApp')
 		})
 		.state('fibonacci', {
 			url: '/fibonacci/:firstnth',
+			params: {
+				firstnth: null,
+				squash: true
+			},
 			controller: 'FibonacciCtrl',
 			templateUrl: './app/fibonacci/fibonacci-template.html'
 		})
