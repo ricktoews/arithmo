@@ -1,0 +1,2 @@
+<div ng-show="decimal.parts.partB && decimal.parts.partB.length < 10"><span class="decimal-part-a">{{decimal.parts.partA}}</span> + <span class="decimal-part-b">{{decimal.parts.partB}}</span> = {{decimal.parts.partA*1 + decimal.parts.partB*1}}</div>
+<div ng-show="decimal.parts.partA && !decimal.parts.partB && decimal.parts.partA.length < 10">Complemented by {{decimal.denom - decimal.num}} / {{decimal.denom}}</div>

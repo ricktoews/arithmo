@@ -1,4 +1,3 @@
 angular.module('MathApp')
 
-.controller('MainCtrl', function() {
-});
+.controller('MainCtrl', function() {});

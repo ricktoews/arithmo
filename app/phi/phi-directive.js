@@ -28,14 +28,9 @@ angular.module('MathApp')
 })
 
 .directive('phiData', function() {
-	function link(scope, el, attrs) {
-		console.log('phiData.el', el[0]);
-	}
-
 	return {
 		restrict: 'A',
-		templateUrl: './app/phi/data-template.html',
-		link: link
+		templateUrl: './app/phi/data-template.html'
 	};
 })
 ;

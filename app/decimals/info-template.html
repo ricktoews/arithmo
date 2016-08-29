@@ -1,3 +1,37 @@
 <div info-heading title="Decimals"></div>
 
-<p>Something to notice is what happens with a prime number in the denominator. Try it with 7.</p>
+<!-- Full-reptend -->
+<div ng-hide="flags.resolves || flags.hybrid">
+<div ng-show="flags.isFullReptend">
+<p>This denominator ({{denom}}) is what is known as a full-reptend prime; that is, the length of the period is the denominator - 1 ({{repeating}} in this case), which is the maximum possible length. All periods of this type are complemented internally, so that, if the period is divided into two equal length groups of digits, the sum of the two groups is a number consisting entirely of 9s.</p>
+
+<p>The period of such a denominator is always internally complementary: if its digits are divided into two groups of equal length, the sum of those groups is an integer consisting entirely of 9s.</p>
+</div>
+
+<!-- Internal complement -->
+<div ng-show="flags.isFullReptend === false && flags.isPrime">
+<p>This denominator is not a full-reptend prime: the length of the period ({{repeating}}) is less than the denominator - 1. However, it is still internally complemented: the period can be split into two groups of an equal number of digits, and the sum of these two groups is a number consisting entirely of 9s.</p>
+
+<p>It is also worth noting that, while the length of the period is less than the maximum possible length (denominator - 1, or {{denom-1}}), it is a factor of that length.</p>
+</div>
+
+<!-- External complement -->
+<div ng-show="flags.externalComplement">
+<p>This denominator has periods that cannot be split into two complementary groups. Instead, each period is complemented by the period of another fraction with this denominator.</p>
+</div>
+</div>
+
+<!-- Hybrid period -->
+<div ng-show="flags.hybrid">
+<p>The number {{denom}} has factors {{factorList.join(', ')}}. When the denominator's factors include 2 or 5, as well as any other prime number, the periods of the non-reducible fractions are hybrids, in that they begin with a group that resolves and then continue with a group that repeats. This second group can be internally or externally complementary. In the case of {{denom}}, it is <span ng-show="flags.externalComplement">externally</span><span ng-show="flags.internalComplement">internally</span> complementary.</p>
+</div>
+
+<!-- Resolving period -->
+<div ng-show="flags.resolves">
+<p>The number {{denom}} has factors {{factorList.join(', ')}}. When the denominator does not have factors other than 2 or 5, the period resolves.</p>
+</div>
+
+<!-- Composite, but no resolving portion -->
+<div ng-show="!flags.hybrid && !flags.resolves && !flags.isPrime">
+<p>The number {{denom}} has factors {{factorList.join(', ')}}. When the denominator's factors do not include 2 or 5, the entire period repeats, though the denominator is prime.</p>
+</div>
