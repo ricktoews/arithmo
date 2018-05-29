@@ -6,7 +6,7 @@ angular.module('MathApp')
 		.state('index', {
 			url: '/',
 			controller: 'MainCtrl',
-			templateUrl: './app/main-template.html'
+			templateUrl: './arithmo/app/main-template.html'
 		})
 		.state('fibonacci', {
 			url: '/fibonacci/:firstnth',
@@ -15,7 +15,7 @@ angular.module('MathApp')
 				squash: true
 			},
 			controller: 'FibonacciCtrl',
-			templateUrl: './app/fibonacci/fibonacci-template.html'
+			templateUrl: './arithmo/app/fibonacci/fibonacci-template.html'
 		})
 		.state('decimal', {
 			url: '/decimals/:denom/:num',
@@ -26,12 +26,12 @@ angular.module('MathApp')
 				}
 			},
 			controller: 'DecimalCtrl',
-			templateUrl: './app/decimals/decimal-template.html'
+			templateUrl: './arithmo/app/decimals/decimal-template.html'
 		})
 		.state('phi', {
 			url: '/phi/:power',
 			controller: 'PhiCtrl',
-			templateUrl: './app/phi/phi-powers-template.html'
+			templateUrl: './arithmo/app/phi/phi-powers-template.html'
 		})
 	;
 
