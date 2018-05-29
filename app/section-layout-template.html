@@ -3,7 +3,7 @@ angular.module('MathApp')
 .directive('sectionLayout', function() {
 	return {
 		restrict: 'AE',
-		templateUrl: './arithmo/app/section-layout-template.html',
+		templateUrl: './app/section-layout-template.html',
 		link: (scope, el, attrs) => {
 			console.log('sectionLayout heading', attrs.sectionHeading);
 			scope.heading = attrs.sectionHeading;
